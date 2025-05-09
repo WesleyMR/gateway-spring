@@ -8,7 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class UserDocument(
     @Id val id: String? = null,
     val username: String,
-    val passwordHash: String
+    val passwordHash: String,
+    val refreshToken: String? = null //
 ) {
     fun toDomain() = User(id, username, passwordHash)
 }
